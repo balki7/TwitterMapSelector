@@ -13,7 +13,7 @@ A google map application that uses tweet locations.
 NodeJS should be installed.
 
 ### Installing
-Map Application
+*Map Application*
 ```
 node server.js
 ```
@@ -22,7 +22,7 @@ Then the application is ready.
 http://localhost:9001
 ```
 
-Datafill Application
+*Datafill Application*
 ```
 node data_collector/server.js
 ```
