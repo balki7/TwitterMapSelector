@@ -30,19 +30,18 @@ node data_collector/server.js
 ```
 
 ## Examples
-
-###Results for search **"music"**
+### Results for search **"music"**
 ![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img3.png)
 ![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img4.png)
 ![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img5.png)
 
-###Selecting a search area
+### Selecting a search area
 ![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img6.png)
 
-###Results of selection
+### Results of selection
 ![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img7.png)
 
-###Info box sample
+### Info box sample
 ![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img9.png)
 
 ## Author
