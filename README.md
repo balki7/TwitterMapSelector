@@ -23,6 +23,8 @@ http://localhost:9001
 ```
 
 *Datafill Application*
+Change the keywords in data_collector/server.js.
+And then,
 ```
 node data_collector/server.js
 ```
