@@ -11,6 +11,7 @@ get.get = (text, bounds, successCallback, failureCallback) => {
         };
 
         if(bounds){
+            console.log([ Number(bounds.lng.min), Number(bounds.lat.min) ], [ Number(bounds.lng.max), Number(bounds.lat.max) ]);
             filter.geo = {
                 $geoWithin: {
                     $box: [
