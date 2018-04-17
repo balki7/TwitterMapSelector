@@ -30,7 +30,14 @@ node data_collector/server.js
 ```
 
 ## Examples
-![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img1.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img2.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img3.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img4.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img5.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img6.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img7.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img8.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img9.png)
 
 ## Author
 Cavide Balkı GEMİRTER - 2018
