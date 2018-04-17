@@ -4,11 +4,23 @@ let get = {};
 
 let collection = 'tweets';
 
-get.get = (filter, successCallback, failureCallback) => {
+get.get = (text, bounds, successCallback, failureCallback) => {
     db.connect('local', () => {
-        db.find(collection, {
-            text : new RegExp(filter, 'i')
-        }, (err, result) => {
+        let filter = {
+            text : new RegExp(text, 'i')
+        };
+
+        if(bounds){
+            filter.geo = {
+                $geoWithin: {
+                    $box: [
+                            [ Number(bounds.lng.min), Number(bounds.lat.min) ], [ Number(bounds.lng.max), Number(bounds.lat.max) ]
+                        ]
+                }
+            };
+        }
+
+        db.find(collection, filter, (err, result) => {
             if(err){
                 db.disconnect();
                 return failureCallback(err);

@@ -23,5 +23,18 @@ let storeTweets = (keyword, count) => {
     });
 };
 
-storeTweets('%tesla', 10000);
+//storeTweets('Atatürk', 10000);
+//storeTweets('Türkiye', 10000);
+
+storeTweets('concert', 10000);
+//storeTweets('tesla', 10000);
+//storeTweets('spacex', 10000);
+//storeTweets('İstanbul', 10000);
+
+//storeTweets('Cumhuriyet', 10000);
+//storeTweets('Balkı', 10000);
+//storeTweets('izmir', 10000);
+//storeTweets('teb', 10000);
+//storeTweets('ekonomi', 10000);
+//storeTweets('hürriyet', 10000);
 

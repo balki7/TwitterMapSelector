@@ -32,7 +32,8 @@ twitter.search = (filter, allCount, callback) => {
 
         client.get('search/tweets', options, (error, tweets, response) => {
             if (error) {
-                throw Error(error.message || error[0].message);
+                console.error(error.message || error[0].message);
+                return callback(returnList);
             }
 
             let statuses = tweets.statuses;

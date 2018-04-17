@@ -18,7 +18,7 @@ app.get('/get', function (req, res) {
 });
 
 app.get('/searchTweets', function (req, res) {
-    dataCollector.get(req.query.filter, (content) => {
+    dataCollector.get(req.query.filter, req.query.bounds, (content) => {
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(content));
     }, (err) => {
