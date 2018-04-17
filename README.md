@@ -30,7 +30,7 @@ node data_collector/server.js
 ```
 
 ## Examples
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/balki7/TwitterMapSelector/blob/master/doc/img1.png)
 
 ## Author
 Cavide Balkı GEMİRTER - 2018
