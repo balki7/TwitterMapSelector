@@ -11,12 +11,14 @@ get.get = (text, bounds, successCallback, failureCallback) => {
         };
 
         if(bounds){
-            console.log([ Number(bounds.lng.min), Number(bounds.lat.min) ], [ Number(bounds.lng.max), Number(bounds.lat.max) ]);
-            filter.geo = {
+            filter.coordinates = {
                 $geoWithin: {
-                    $box: [
-                            [ Number(bounds.lng.min), Number(bounds.lat.min) ], [ Number(bounds.lng.max), Number(bounds.lat.max) ]
-                        ]
+                    $geometry: {
+                        type: "Polygon" ,
+                        coordinates: [[ [ Number(bounds.lat.min), Number(bounds.lng.min)], [ Number(bounds.lat.max), Number(bounds.lng.min) ]
+                            , [ Number(bounds.lat.max), Number(bounds.lng.max) ], [ Number(bounds.lat.min), Number(bounds.lng.max) ]
+                            , [ Number(bounds.lat.min), Number(bounds.lng.min) ] ]]
+                    }
                 }
             };
         }

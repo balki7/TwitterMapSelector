@@ -31,7 +31,7 @@ let storeTweets = (keyword, count) => {
 //storeTweets('spacex', 10000);
 //storeTweets('İstanbul', 10000);
 
-//storeTweets('Cumhuriyet', 10000);
+storeTweets('Cumhuriyet', 10000);
 //storeTweets('Balkı', 10000);
 //storeTweets('izmir', 10000);
 //storeTweets('teb', 10000);

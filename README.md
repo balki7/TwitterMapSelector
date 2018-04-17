@@ -30,7 +30,7 @@ node data_collector/server.js
 ```
 
 ## Examples
-
+![alt text](http://url/to/img.png)
 
 ## Author
 Cavide Balkı GEMİRTER - 2018
