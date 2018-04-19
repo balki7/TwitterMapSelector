@@ -61,4 +61,24 @@ twitter.search = (filter, allCount, callback) => {
     getTweets(filter);
 };
 
+twitter.stream = (callback) => {
+    let client = twitter.authenticate();
+
+    let getTweets = () => {
+        let stream = client.stream('statuses/filter', {track: '.'});
+        stream.on('data', (tweet) => {
+            if(tweet && tweet.geo){
+                console.info(tweet.text + '\t' + tweet.geo);
+                callback(tweet);
+            }
+        });
+
+        stream.on('error', (error) => {
+            console.error(error);
+        });
+    };
+
+    getTweets();
+};
+
 module.exports = twitter;

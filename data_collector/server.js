@@ -3,38 +3,21 @@ const db = require('../db/mongodb');
 
 let collection = 'tweets';
 
-let storeTweets = (keyword, count) => {
+let storeTweets = (count) => {
     db.connect('local', () => {
         console.info('Connected to DB');
 
-        twitter.search(keyword, count, (tweets) => {
-            if (tweets && tweets.length > 0) {
-                db.bulkInsert(collection, tweets, () => {
-                    console.info('Record inserted.\nCount : ' + tweets.length);
-                    db.disconnect();
-                });
-            }
-            else {
-                console.info("Finished...\nNo records.");
-            }
+        twitter.stream((tweet) => {
+            db.insert(collection, tweet, () => {
+                console.info('Record inserted.');
+            });
         });
     }, (err) => {
         console.error('DB connect error', err);
+        db.disconnect();
     });
 };
 
-//storeTweets('Atatürk', 10000);
-//storeTweets('Türkiye', 10000);
-//storeTweets('music', 10000);
+storeTweets(10000);
 
-//storeTweets('tesla', 10000);
-//storeTweets('spacex', 10000);
-//storeTweets('İstanbul', 10000);
-
-storeTweets('Cumhuriyet', 10000);
-//storeTweets('Balkı', 10000);
-//storeTweets('izmir', 10000);
-//storeTweets('teb', 10000);
-//storeTweets('ekonomi', 10000);
-//storeTweets('hürriyet', 10000);
 
