@@ -9,7 +9,7 @@ let storeTweets = (count) => {
 
         twitter.stream((tweet) => {
             db.insert(collection, tweet, () => {
-                console.info('Record inserted.');
+                console.info('----> Record inserted.');
             });
         });
     }, (err) => {
